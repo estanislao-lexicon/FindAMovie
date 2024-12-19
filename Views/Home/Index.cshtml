@@ -1,0 +1,42 @@
+﻿@* @model IEnumerable<FindAMovie.Models.Movie> *@
+
+@model List<Movie>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 text-dark">Welcome to Find a Movie</h1>    
+</div>
+<div class="container">
+    <form method="get" accept="@Url.Action("Index", "Home")">
+        <input type="text" name="searchTerm" placeholder="Search movie" value="@Context.Request.Query["searchTerm"]" />
+        <button type="submit">Search</button>
+    </form>
+
+    <table class="table">        
+        <tbody>        
+            @foreach (Movie item in Model)
+            {
+                <tr>
+                    <td>
+                        <div class="movie-card">
+                            <div class="movie-info">
+                                <strong>@item.Series_Title</strong>
+                                <p>@item.Overview</p>
+                                <p>Duration: @item.Runtime</p>
+                                <p>Year: @item.Released_Year</p>
+                                <p>Genre: @item.Genre</p>
+                                <p>Rating: @item.IMDB_Rating</p>
+                            </div>
+                             <div class="movie-poster">
+                                <img src="@item.Poster_Link" alt="No Image" width="100" height="150" />                            
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
