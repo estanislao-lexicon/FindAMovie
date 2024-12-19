@@ -6,7 +6,7 @@
         <img src="@Model.Poster_Link" alt="No Image" width="100" height="150" />                            
     </div>
 </div>
-    <form method="post" asp-action="UpdateMovie" asp-controller="User">
+    <form method="post" asp-action="Edit" asp-controller="User">
         <input type="hidden" name="Id" value="@Model.Id" />
 
         <div class="form-group">
@@ -82,9 +82,11 @@
         <div class="form-group">
             <label for="Gross">Gross</label>
             <input type="number" class="form-control" id="Gross" name="Gross" value="@Model.Gross" />
-        </div>
+        </div>        
 
-        <button type="submit" class="update-button">Update</button>
-        <a asp-action="Dashboard" class="update-button">Cancel</a>
+        <div class="movie-actions">
+            <button type="submit" class="new-button">Update</button>
+            <a asp-action="Dashboard" class="update-button">Cancel</a>
+        </div>
     </form>
 </div>

@@ -9,14 +9,6 @@
       "PackagePath": "staticwebassets/Img/Header.png"
     },
     {
-      "Id": "/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/wwwroot/css/dasboard.css",
-      "PackagePath": "staticwebassets/css/dasboard.css"
-    },
-    {
-      "Id": "/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/wwwroot/css/index.css",
-      "PackagePath": "staticwebassets/css/index.css"
-    },
-    {
       "Id": "/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

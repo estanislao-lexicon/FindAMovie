@@ -1,5 +1,8 @@
+/* Base HTML and Body Styling */
 html {
   font-size: 14px;
+  position: relative;
+  min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -8,19 +11,11 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
   margin-bottom: 60px;
 }
 
+/* Form and Input Styling */
 .form-container {
   display: flex;
   align-items: center;
@@ -71,24 +66,30 @@ body {
   background-color: #218838;
 }
 
-.update-button {
+/* Button and Link Styling */
+.update-button,
+a.update-button {
+  display: inline-block;
   padding: 8px 16px;
   font-size: 16px;
-  background-color: #6c757d; /* Gray */
+  background-color: #6c757d;
   color: white;
-  border: none;
   border-radius: 4px;
+  text-align: center;
+  border: none;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.update-button:hover {
-  background-color: #5a6268; /* Darker Gray */
+.update-button:hover,
+a.update-button:hover {
+  background-color: #5a6268;
 }
 
 .delete-button {
   padding: 8px 16px;
   font-size: 16px;
-  background-color: #dc3545; /* Red */
+  background-color: #dc3545;
   color: white;
   border: none;
   border-radius: 4px;
@@ -96,14 +97,63 @@ body {
 }
 
 .delete-button:hover {
-  background-color: #c82333; /* Darker Red */
+  background-color: #c82333;
 }
 
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Movie Actions Styling */
 .movie-actions {
   display: flex;
-  gap: 10px; /* Adjust the spacing between the buttons */
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .movie-actions form {
   margin: 0;
+}
+
+/* Card Structure */
+.movie-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Movie Information Section */
+.movie-info {
+  flex: 1;
+  padding-right: 15px;
+}
+
+.movie-info strong {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.movie-info p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+/* Movie Poster Section */
+.movie-poster {
+  flex-shrink: 0;
+}
+
+.poster-img {
+  width: 100px;
+  height: auto;
+  border-radius: 4px;
 }

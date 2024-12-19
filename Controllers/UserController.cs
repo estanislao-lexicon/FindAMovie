@@ -89,7 +89,8 @@ public class UserController : Controller
     [HttpGet]
     public IActionResult NewMovie()
     {
-        return View(); // Render the form for adding a new movie
+        var movie = new Movie();
+        return View(movie); // Render the form for adding a new movie
     }
 
     [HttpPost]

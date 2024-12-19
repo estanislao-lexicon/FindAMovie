@@ -13,7 +13,9 @@
             <input type="text" name="searchTerm" placeholder="Search movie to edit" value="@Context.Request.Query["searchTerm"]" class="search-input" />
             <button type="submit" class="update-button">Search</button>
         </form>
-        <button onclick="newMovie()" type="button" class="new-button">New</button>
+        <form method="get" asp-area="" asp-action="NewMovie" asp-controller="User">
+            <button type="submit" class="new-button">New</button>
+        </form>
     </div>   
 
     <table class="table">        
