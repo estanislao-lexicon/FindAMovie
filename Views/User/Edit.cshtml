@@ -1,0 +1,90 @@
+@model Movie
+
+<div class="container">
+    <h1>Edit @Model.Series_Title</h1>
+    <div class="movie-poster">
+        <img src="@Model.Poster_Link" alt="No Image" width="100" height="150" />                            
+    </div>
+</div>
+    <form method="post" asp-action="UpdateMovie" asp-controller="User">
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="form-group">
+            <label for="Series_Title">Title</label>
+            <input type="text" class="form-control" id="Series_Title" name="Series_Title" value="@Model.Series_Title" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Released_Year">Released Year</label>
+            <input type="number" class="form-control" id="Released_Year" name="Released_Year" value="@Model.Released_Year" required />
+        </div>
+
+        <div class="form-group">
+            <label for="Certificate">Certificate</label>
+            <input type="text" class="form-control" id="Certificate" name="Certificate" value="@Model.Certificate" />
+        </div>
+
+        <div class="form-group">
+            <label for="Runtime">Runtime</label>
+            <input type="text" class="form-control" id="Runtime" name="Runtime" value="@Model.Runtime" />
+        </div>
+
+        <div class="form-group">
+            <label for="Genre">Genre</label>
+            <input type="text" class="form-control" id="Genre" name="Genre" value="@Model.Genre" />
+        </div>
+
+        <div class="form-group">
+            <label for="IMDB_Rating">IMDB Rating</label>
+            <input type="number" step="0.01" class="form-control" id="IMDB_Rating" name="IMDB_Rating" value="@Model.IMDB_Rating" />
+        </div>
+
+        <div class="form-group">
+            <label for="Overview">Overview</label>
+            <textarea class="form-control" id="Overview" name="Overview">@Model.Overview</textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="Meta_score">Meta Score</label>
+            <input type="number" class="form-control" id="Meta_score" name="Meta_score" value="@Model.Meta_score" />
+        </div>
+
+        <div class="form-group">
+            <label for="Director">Director</label>
+            <input type="text" class="form-control" id="Director" name="Director" value="@Model.Director" />
+        </div>
+
+        <div class="form-group">
+            <label for="Star1">Star 1</label>
+            <input type="text" class="form-control" id="Star1" name="Star1" value="@Model.Star1" />
+        </div>
+
+        <div class="form-group">
+            <label for="Star2">Star 2</label>
+            <input type="text" class="form-control" id="Star2" name="Star2" value="@Model.Star2" />
+        </div>
+
+        <div class="form-group">
+            <label for="Star3">Star 3</label>
+            <input type="text" class="form-control" id="Star3" name="Star3" value="@Model.Star3" />
+        </div>
+
+        <div class="form-group">
+            <label for="Star4">Star 4</label>
+            <input type="text" class="form-control" id="Star4" name="Star4" value="@Model.Star4" />
+        </div>
+
+        <div class="form-group">
+            <label for="No_of_Votes">Number of Votes</label>
+            <input type="number" class="form-control" id="No_of_Votes" name="No_of_Votes" value="@Model.No_of_Votes" />
+        </div>
+
+        <div class="form-group">
+            <label for="Gross">Gross</label>
+            <input type="number" class="form-control" id="Gross" name="Gross" value="@Model.Gross" />
+        </div>
+
+        <button type="submit" class="update-button">Update</button>
+        <a asp-action="Dashboard" class="update-button">Cancel</a>
+    </form>
+</div>

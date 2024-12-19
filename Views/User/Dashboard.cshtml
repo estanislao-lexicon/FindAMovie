@@ -1,0 +1,59 @@
+@model List<Movie>
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="text-center">
+    <h1>Dashboard</h1>
+</div>
+<div class="container">
+    <div class="form-container">
+        <form method="get" accept="@Url.Action("Index", "Home")">
+            <input type="text" name="searchTerm" placeholder="Search movie to edit" value="@Context.Request.Query["searchTerm"]" class="search-input" />
+            <button type="submit" class="update-button">Search</button>
+        </form>
+        <button onclick="newMovie()" type="button" class="new-button">New</button>
+    </div>   
+
+    <table class="table">        
+        <tbody>        
+            @foreach (Movie movie in Model)
+            {
+                <tr>
+                    <td>
+                        <div class="movie-card">
+                            <div class="movie-info">
+                                <strong>@movie.Series_Title</strong>
+                                <p>Description: @movie.Overview</p>
+                                <p>Duration: @movie.Runtime</p>
+                                <p>Year: @movie.Released_Year</p>
+                                <p>Genre: @movie.Genre</p>
+                                <p>Certificate: @movie.Certificate</p>
+                                <p>Gross: @movie.Gross</p>
+                                <p>Directo: @movie.Director</p>
+                                <p>Star 1: @movie.Star1</p>
+                                <p>Star 2: @movie.Star2</p>
+                                <p>Star 3: @movie.Star3</p>
+                                <p>Star 4: @movie.Star4</p>
+                                <p>Meta Score: @movie.Meta_score</p>
+                                <p>IMDB Rating: @movie.IMDB_Rating</p>
+                                <div class="movie-actions">
+                                    <form method="get" asp-area="" asp-controller="User" asp-action="Edit" asp-route-id="@movie.Id">
+                                        <button type="submit" class="update-button">Update</button>
+                                    </form>
+                                    <form method="post" asp-area="" asp-controller="User" asp-action="Delete" asp-route-id="@movie.Id" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this movie?');">
+                                        <button type="submit" class="delete-button">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="movie-poster">
+                                <img src="@movie.Poster_Link" alt="No Image" width="100" height="150" />                            
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,6 +1,4 @@
-﻿@* @model IEnumerable<FindAMovie.Models.Movie> *@
-
-@model List<Movie>
+﻿@model List<Movie>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -11,27 +9,27 @@
 </div>
 <div class="container">
     <form method="get" accept="@Url.Action("Index", "Home")">
-        <input type="text" name="searchTerm" placeholder="Search movie" value="@Context.Request.Query["searchTerm"]" />
-        <button type="submit">Search</button>
+        <input type="text" name="searchTerm" placeholder="Search movie" value="@Context.Request.Query["searchTerm"]" class="search-input"/>
+        <button type="submit" class="update-button">Search</button>
     </form>
 
     <table class="table">        
         <tbody>        
-            @foreach (Movie item in Model)
+            @foreach (Movie movie in Model)
             {
                 <tr>
                     <td>
                         <div class="movie-card">
                             <div class="movie-info">
-                                <strong>@item.Series_Title</strong>
-                                <p>@item.Overview</p>
-                                <p>Duration: @item.Runtime</p>
-                                <p>Year: @item.Released_Year</p>
-                                <p>Genre: @item.Genre</p>
-                                <p>Rating: @item.IMDB_Rating</p>
+                                <strong>@movie.Series_Title</strong>
+                                <p>@movie.Overview</p>
+                                <p>Duration: @movie.Runtime</p>
+                                <p>Year: @movie.Released_Year</p>
+                                <p>Genre: @movie.Genre</p>
+                                <p>Rating: @movie.IMDB_Rating.ToString("F2")</p>
                             </div>
                              <div class="movie-poster">
-                                <img src="@item.Poster_Link" alt="No Image" width="100" height="150" />                            
+                                <img src="@movie.Poster_Link" alt="No Image" width="100" height="150" />                            
                             </div>
                         </div>
                     </td>

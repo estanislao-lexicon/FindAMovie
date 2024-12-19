@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5CxyVWOG57RM7e/H9jECjAJwpxALYWSzUiNjc5kGHKo=",
+  "Hash": "an/7tjy1WtHBPZEtxH20PI+/zYK4zOc0NpcQ0APvp1Y=",
   "Source": "FindAMovie",
   "BasePath": "_content/FindAMovie",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/obj/Debug/net8.0/scopedcss/projectbundle/FindAMovie.bundle.scp.css"
+    },
+    {
+      "Identity": "/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/wwwroot/css/dasboard.css",
+      "SourceId": "FindAMovie",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/wwwroot/",
+      "BasePath": "_content/FindAMovie",
+      "RelativePath": "css/dasboard.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/dasboard.css"
     },
     {
       "Identity": "/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/wwwroot/css/index.css",

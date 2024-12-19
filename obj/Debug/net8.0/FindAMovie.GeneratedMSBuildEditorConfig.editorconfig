@@ -42,8 +42,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/Views/User/Dasboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9EYXNib2FyZC5jc2h0bWw=
+[/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/Views/User/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9EYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/Views/User/NewMovie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9OZXdNb3ZpZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/estanislao-lexicon/Lexicon/Code/week51/FindAMovie/Views/_ViewImports.cshtml]

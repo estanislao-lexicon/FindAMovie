@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FindAMovie.styles.css" asp-append-version="true" />
     <link href="~/css/index.css" rel="stylesheet" />
+    <link href="~/css/dashboard.css" rel="stylesheet" />
 </head>
-<body class="welcome-bg py-5">
+<body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -26,7 +27,7 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-asp-area="" asp-asp-controller="User" asp-action="Dashboard">Dashboard</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Dashboard">Dashboard</a>
                             </li>
                         }
                     </ul>
@@ -36,7 +37,7 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 welcome-bg py-5">
             @RenderBody()
         </main>
     </div>
